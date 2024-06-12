@@ -1,49 +1,80 @@
 .title-container {
     text-align: center;
-    width: 510px;
-    margin-top: 1rem;
+    width: 100%;
+    max-width: 510px;
+    margin: 1rem auto;
+}
+.body{
+ 
+  background-image:url(https://i.pinimg.com/originals/6b/77/0b/6b770b4737ccb11d896f28ad50636fa9.jpg);
+ 
 }
 
-.letter-yellow {
-    color: #c79c2e;
-}
 
-.letter-green {
-    color: #51b36e;
-}
-.letter-red {
-    color: #943e3c;
-}
+button {
+   
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  
 
+/* Letter Color Classes */
+.letter-yellow { color: #c79c2e; }
+.letter-green { color: #51b36e; }
+.letter-red { color: #943e3c; }
+
+/* Application Container Styles */
 .app-container {
     max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-}
+    padding: 1rem;
 
+    background-color: rgba(255, 255, 255, 0.875); /* Cor preta com 50% de opacidade */
+    
+    border-radius: 7px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+.pin{
+position: absolute;
+width: 10%;
+height: 10%;
+margin-top: -200px;
+
+}
+/* Tile Row Styles */
 .tile-row {
     margin-bottom: 1rem;
+    display: flex;
     justify-content: center;
-    display:flex;
     box-sizing: border-box;
 }
 
+/* Tile Column Styles */
 .tile-column {
     background-color: #f4f3f1;
     color: #252525;
-    height: 40px;
-    width: 48px;
+    height: 50px;
+    width: 50px;
     border-radius: 0.25rem;
-    margin-right: 0.5rem;
-    font-size: 20px;
+    margin: 0 0.25rem;
+    font-size: 24px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    display:flex;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
 }
+
 
 .typing {
     border: 3px solid #252525;
@@ -68,30 +99,62 @@
     color: #f4f3f1;
 }
 
+
 .keyboard-container {
     width: 100%;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+button {
+    /* Estilos que serão aplicados a todos os botões */
+    background-color: #e7e7e7; /* Cor de fundo */
+    color: black; /* Cor do texto */
+    border: none;
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor do mouse */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
 }
 
 .keyboard-row-container {
-    flex-wrap: wrap;
+    display: flex;
     align-items: center;
     margin-bottom: 0.5rem;
     justify-content: center;
-    display: flex;
+    flex-wrap: wrap;
+    
 }
 
 .keyboard-row-container.notAlphabetic {
-    width:100%
+    width: 100%;
 }
 
 .keyboard-row-container:not(.notAlphabetic) button {
-    width: 8%;
+    width: 36px;
     height: 40px;
     border-radius: 0.25rem;
-    margin-right: 0.25rem;
+    margin: 0.25rem;
     border: 1px solid #252525;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+
+/* Button Hover Effects */
+.keyboard-row-container:not(.notAlphabetic) button:hover {
+    background-color: #252525;
+    color: #f4f3f1;
+}
+
+.modal-content{
+    width: 200px;
+    background-color: #252525;
+    z-index: 1;
+    border: none;
+    border-radius: 10px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
